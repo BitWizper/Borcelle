@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - BORCELLE</title>
+    
+    <!-- Incluir Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            color: #805d3b;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            background-color: #805d3b;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-icons a {
+            margin-left: 20px;
+            font-size: 24px;
+            color: #805d3b;
+            text-decoration: none;
+        }
+
+        .nav-icons a:hover {
+            color: #b07244;
+        }
+
+        .logout-button {
+            background-color: #805d3b;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        .logout-button:hover {
+            background-color: #b07244;
+        }
+
+        .menu-toggle {
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 60px;
+            transition: left 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-menu ul li {
+            padding: 10px;
+        }
+
+        .side-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .side-menu ul li a:hover {
+            background-color: #575757;
+            display: block;
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        .catalog-section {
+            padding: 40px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .catalog-section h2 {
+            color: #805d3b;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .catalog-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .catalog-item {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .catalog-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .catalog-info h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .catalog-info p {
+            color: #555;
+        }
+
+        .catalog-info button {
+            background-color: #805d3b;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .catalog-info button:hover {
+            background-color: #b07244;
+        }
+
+        footer {
+            background-color: #805d3b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Estilos de los botones de selección */
+        .toggle-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .toggle-button {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 16px;
+        }
+
+        .toggle-button.active {
+            background-color: #805d3b;
+            color: white;
+        }
+
+        .toggle-button:hover {
+            background-color: #d4d4d4;
+        }
+
+        /* Iconos de categorías */
+        .toggle-button i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+                <h1>BORCELLE</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-shopping-cart"></i></a> <!-- Carrito -->
+                <a href="#"><i class="fas fa-bell"></i></a> <!-- Notificaciones -->
+                <button class="logout-button" onclick="logout()">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="menu.html">Inicio</a></li>
+            <li><a href="categorias.html">Categorías</a></li>
+        </ul>
+    </nav>
+
+    <section class="catalog-section">
+        <h2>Catálogo de Productos</h2>
+
+        <!-- Botones de selección de categoría -->
+        <div class="toggle-buttons-container">
+            <button class="toggle-button" onclick="filtrarPorCategoria('Todos')">
+                <i class=""></i> Todos
+            </button>
+            <button class="toggle-button active" onclick="filtrarPorCategoria('Baby Shower')">
+                <i class="fas fa-baby"></i> Baby Shower
+            </button>
+            <button class="toggle-button" onclick="filtrarPorCategoria('XV años')">
+                <i class="fas fa-birthday-cake"></i> XV Años
+            </button>
+            <button class="toggle-button" onclick="filtrarPorCategoria('Cumpleaños')">
+                <i class="fas fa-gift"></i> Cumpleaños
+            </button>
+            <button class="toggle-button" onclick="filtrarPorCategoria('Bodas')">
+                <i class="fas fa-ring"></i> Bodas
+            </button>
+            <button class="toggle-button" onclick="filtrarPorCategoria('Bautizos')">
+                <i class="fas fa-church"></i> Bautizos
+            </button>
+            
+        </div>
+
+        <div class="catalog-container">
+            <!-- Productos del catálogo se cargarán aquí -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 BORCELLE. Todos los derechos reservados.</p>
+    </footer>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sideMenu = document.getElementById('sideMenu');
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+
+            // Toggle del menú lateral
+            menuToggle.addEventListener('click', function() {
+                sideMenu.classList.toggle('active'); // Muestra/oculta el menú
+            });
+
+            // Cambiar el botón activo en el menú de categorías
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    toggleButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+
+        // Función para cerrar sesión
+        function logout() {
+            window.location.href = "index.html"; // Redirige al index.html
+        }
+    </script>
+    <script src="pasteles.js"></script>
+</body>
+</html>

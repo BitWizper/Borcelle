@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - BORCELLE</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra Superior de Navegación -->
+    <header>
+        <div class="nav-container">
+            <!-- Menú Hamburguesa -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="logo">
+                <h1>BORCELLE</h1>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Desplegable -->
+    <nav class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="menu.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="categorias.html"><i class="fas fa-th-list"></i> Categorías</a></li>
+            <li><a href="http://localhost:3001/api-docs" target="_blank"><i class="fas fa-book"></i> Documentación</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Sección de Ofertas -->
+    <section class="offers-section">
+        <div class="offer-banner">
+            <h2>Ofertas Especiales</h2>
+            <div class="offer-image">
+                <img src="dessert-banner.png" alt="Oferta Pasteles">
+            </div>
+            <a href="#" class="view-more">Ver otros &gt;&gt;</a>
+        </div>
+    </section>
+
+    <!-- Sección de Categorías -->
+    <section class="categories-section">
+        <h2>Categorías</h2>
+        <div class="categories-container">
+            <div class="category-item">
+                <img class="fas fa-baby" alt="Baby Shower">
+                <p>Baby Shower</p>
+            </div>
+            <div class="category-item">
+                <img class="fas fa-birthday-cake" alt="XV Años">
+                <p>XV Años</p>
+            </div>
+            <div class="category-item">
+                <img class="fas fa-birthday-cake" alt="Cumpleaños">
+                <p>Cumpleaños</p>
+            </div>
+            <div class="category-item">
+                <img class="fas fa-ring" alt="Bodas">
+                <p>Bodas</p>
+            </div>
+            <div class="category-item">
+                <img class="fas fa-church" alt="Bautizos">
+                <p>Bautizos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Productos Destacados -->
+    <section class="featured-products-section">
+        <h2>Destacados</h2>
+        <div class="products-container">
+            <div class="product-item">
+                <img src="https://i.pinimg.com/control/564x/11/f0/c4/11f0c44771a29bf8754f226be9724cce.jpg" alt="Pastel Star">
+                <div class="product-info">
+                    <h3>Pastel de Cumpleaños Star</h3>
+                    <p>$145.00 MXN</p>
+                    <p>⭐ 4.5</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/control/564x/20/a0/b9/20a0b9803d6e8e1e47a119259e1695d1.jpg" alt="Pastel Totoro">
+                <div class="product-info">
+                    <h3>Pastel de Aniversario Totoro</h3>
+                    <p>$255.00 MXN</p>
+                    <p>⭐ 4.8</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BORCELLE. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Abrir y cerrar el menú hamburguesa
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sideMenu = document.getElementById('sideMenu');
+
+        menuToggle.addEventListener('click', () => {
+            sideMenu.classList.toggle('active');
+        });
+    </script>
+
+    <!-- Verificar si el usuario está autenticado -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('token');
+
+            if (!token) {
+                alert("Debes iniciar sesión primero.");
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>

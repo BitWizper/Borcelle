@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: #805d3b;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    background-color: #805d3b;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-icons img {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Menú lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculto por defecto */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 10px;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.side-menu ul li a:hover {
+    background-color: #575757;
+    display: block;
+}
+
+/* Cuando se activa el menú */
+.side-menu.active {
+    left: 0;
+}
+
+/* Sección de Ofertas */
+.offers-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.offers-section h2 {
+    color: #805d3b;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.offer-banner {
+    position: relative;
+}
+
+.offer-image img {
+    max-width: 80%;
+    border-radius: 15px;
+}
+
+.view-more {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    color: #b07244;
+    text-decoration: none;
+}
+
+.categories-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.categories-section h2 {
+    color: #805d3b;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.category-item {
+    text-align: center;
+}
+
+.category-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    color: #805d3b;
+    font-size: 16px;
+}
+
+.featured-products-section {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.featured-products-section h2 {
+    color: #805d3b;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product-item {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-info h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #555;
+}
+
+footer {
+    background-color: #805d3b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

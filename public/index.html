@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión o Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="section">
+        <div class="form-container">
+            <h2 id="form-title">Login</h2>
+
+            <!-- Formulario de Login -->
+            <form id="loginForm" class="active-form">
+                <input type="email" id="loginEmail" placeholder="Correo" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <a href="#">¿Has olvidado tu contraseña?</a>
+                <button type="submit">Iniciar Sesión</button>
+                <p>¿No tienes una cuenta aún? <a href="#" id="showRegister">Regístrate</a></p>
+            </form>
+
+            <!-- Formulario de Registro -->
+            <form id="registerForm" class="hidden-form">
+                <input type="email" id="registerEmail" placeholder="Correo" required>
+                <input type="text" id="registerUsername" placeholder="Nombre de Usuario" required>
+                <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                <input type="password" id="registerPasswordConfirm" placeholder="Repite Contraseña" required>
+                <button type="submit">Crear Cuenta</button>
+                <p>¿Ya tienes una cuenta? <a href="#" id="showLogin">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const formTitle = document.getElementById('form-title');
+
+        // Mostrar formulario de registro
+        document.getElementById('showRegister').addEventListener('click', function(e) {
+            e.preventDefault();
+            loginForm.classList.add('hidden-form');
+            registerForm.classList.remove('hidden-form');
+            formTitle.innerText = 'Registro';
+        });
+
+        // Mostrar formulario de login
+        document.getElementById('showLogin').addEventListener('click', function(e) {
+            e.preventDefault();
+            registerForm.classList.add('hidden-form');
+            loginForm.classList.remove('hidden-form');
+            formTitle.innerText = 'Login';
+        });
+
+        // Simulación de un token JWT
+        function generateToken() {
+            return 'fake-jwt-token-' + Math.random().toString(36).substr(2);
+        }
+
+        // Lógica de login
+        loginForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            const response = await fetch('http://localhost:3001/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+            if (response.status === 200) {
+                localStorage.setItem('token', data.token);
+                window.location.href = "menu.html";
+            } else {
+                alert(data.message);
+            }
+        });
+
+        // Lógica de registro
+        registerForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('registerEmail').value;
+            const username = document.getElementById('registerUsername').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('registerPasswordConfirm').value;
+
+            if (password !== confirmPassword) {
+                alert("Las contraseñas no coinciden.");
+                return;
+            }
+
+            const response = await fetch('http://localhost:3001/auth/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, username, password })
+            });
+
+            const data = await response.json();
+            if (response.status === 201) {
+                alert("Registro exitoso. Ahora puedes iniciar sesión.");
+                window.location.href = "menu.html";
+            } else {
+                alert(data.message);
+            }
+        });
+    </script>
+</body>
+</html>

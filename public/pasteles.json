@@ -1,0 +1,317 @@
+[
+  {
+    "Nombre": "Pastel Limón Frambuesa Fusión",
+    "sabor": "limón con frambuesa",
+    "tamano": "Mediano",
+    "capas": 3,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["amarillo", "verde", "blanco"],
+      "precio_extra": 9.00
+    },
+    "relleno": "crema de piña",
+    "extras": ["chispas de coco", "hojas de menta"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/control/236x/63/b3/4e/63b34e062e8ce9fcd5bc2cac2c9e1231.jpg"
+  },
+  {
+    "Nombre": "Rebanada de Dulce de Leche",
+    "sabor": "dulce de leche",
+    "tamano": "Rebanada",
+    "capas": 1,
+    "decoracion": {
+      "tipo": "crema de mantequilla",
+      "colores": ["azul marino", "blanco", "gris"],
+      "precio_extra": 12.00
+    },
+    "relleno": "mermelada de mora azul",
+    "extras": ["fresas en chocolate", "chocolate rallado"],
+    "categoria": "XV años",
+    "imagen": "https://i.pinimg.com/control/236x/98/44/bc/9844bc89bf55ea8bc385b6aa1a3383b5.jpg"
+  },
+  {
+    "Nombre": "Pastel de Vainilla Clásico",
+    "sabor": "vainilla",
+    "tamano": "Grande",
+    "capas": 4,
+    "decoracion": {
+      "tipo": "fondant",
+      "colores": ["blanco", "dorado"],
+      "precio_extra": 15.00
+    },
+    "relleno": "crema de limón",
+    "extras": ["perlas de azúcar", "flores comestibles"],
+    "categoria": "Bodas",
+    "imagen": "https://i.pinimg.com/control/564x/c8/ea/67/c8ea6742153a7f2de88a046111143a36.jpg"
+  },
+  {
+    "Nombre": "Pastel de Chocolate Amargo Deluxe",
+    "sabor": "chocolate amargo",
+    "tamano": "Grande",
+    "capas": 4,
+    "decoracion": {
+      "tipo": "fondant",
+      "colores": ["marrón", "beige", "crema"],
+      "precio_extra": 15.00
+    },
+    "relleno": "crema de café",
+    "extras": ["chocolate rallado", "nueces"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/control/236x/2a/79/c3/2a79c3d3198c544e1830c8c967b94206.jpg"
+  },
+  {
+    "Nombre": "Pastel de Red Velvet",
+    "sabor": "red velvet",
+    "tamano": "Mediano",
+    "capas": 1,
+    "decoracion": {
+      "tipo": "crema de mantequilla",
+      "colores": ["rojo", "blanco"],
+      "precio_extra": 10.00
+    },
+    "relleno": "queso crema",
+    "extras": ["fresas", "chocolate blanco"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/564x/c6/19/dd/c619dd97603549594f148c032a8671f4.jpg"
+  },
+  {
+    "Nombre": "Pastel de Baby Shower",
+    "sabor": "chocolate",
+    "tamano": "Pequeño",
+    "capas": 1,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["marrón", "blanco"],
+      "precio_extra": 5.00
+    },
+    "relleno": "nuez caramelizada",
+    "extras": ["virutas de chocolate", "nueces"],
+    "categoria": "Baby Shower",
+    "imagen": "https://i.pinimg.com/736x/c1/5f/b8/c15fb8789e2662b1981cb76d0fbddded.jpg"
+  },
+  {
+    "Nombre": "Pastel de Mango Tropical",
+    "sabor": "mango",
+    "tamano": "Grande",
+    "capas": 3,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["naranja", "amarillo"],
+      "precio_extra": 8.00
+    },
+    "relleno": "mermelada de mango",
+    "extras": ["frutas frescas", "hojas de menta"],
+    "categoria": "Bautizos",
+    "imagen": "https://i.pinimg.com/736x/17/08/5c/17085c05bb7aa0494aecff1b7d88a093.jpg"
+  },
+  {
+    "Nombre": "Pastel de Naranja con Almendras",
+    "sabor": "naranja y almendras",
+    "tamano": "Grande",
+    "capas": 4,
+    "decoracion": {
+      "tipo": "crema de mantequilla",
+      "colores": ["naranja", "blanco"],
+      "precio_extra": 13.00
+    },
+    "relleno": "crema de almendra",
+    "extras": ["almendras caramelizadas", "flores comestibles"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/564x/98/c6/1c/98c61cd36809adbf371d2eb7b6c64e14.jpg"
+  },
+  {
+    "Nombre": "Pastel de Chocolate Blanco",
+    "sabor": "chocolate blanco",
+    "tamano": "Mediano",
+    "capas": 3,
+    "decoracion": {
+      "tipo": "fondant",
+      "colores": ["blanco", "rosa"],
+      "precio_extra": 12.00
+    },
+    "relleno": "crema de frambuesa",
+    "extras": ["flores de azúcar", "chispas de chocolate"],
+    "categoria": "XV años",
+    "imagen": "https://i.pinimg.com/736x/ac/ac/77/acac77305438124241296688d1dfcc55.jpg"
+  },
+  {
+    "Nombre": "Tarta de Queso con Frutas",
+    "sabor": "queso",
+    "tamano": "Mediano",
+    "capas": 2,
+    "decoracion": {
+      "tipo": "frutas frescas",
+      "colores": ["rojo", "morado", "verde"],
+      "precio_extra": 8.00
+    },
+    "relleno": "mermelada de fresa",
+    "extras": ["arándanos", "fresas"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/736x/c8/d7/14/c8d714aa0742d2b351a0113ef8da6d76.jpg"
+  },
+  {
+    "Nombre": "Pastel Arcoíris",
+    "sabor": "vainilla y frutas",
+    "tamano": "Grande",
+    "capas": 2,
+    "decoracion": {
+      "tipo": "fondant",
+      "colores": ["rojo", "naranja", "amarillo", "verde", "azul", "morado"],
+      "precio_extra": 18.00
+    },
+    "relleno": "mermelada de frutas",
+    "extras": ["frutas confitadas"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/564x/b5/7c/cf/b57ccf567cbb59f9160dbe4f0e6dc21c.jpg"
+  },
+  {
+    "Nombre": "Pastel Selva Negra",
+    "sabor": "chocolate y cereza",
+    "tamano": "Grande",
+    "capas": 4,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["marrón", "blanco", "rojo"],
+      "precio_extra": 14.00
+    },
+    "relleno": "crema de cereza",
+    "extras": ["cerezas confitadas", "chocolate rallado"],
+    "categoria": "Baby Shower",
+    "imagen": "https://i.pinimg.com/564x/7a/c6/2e/7ac62e75fddaf53f2467b48b6925751f.jpg"
+  },
+  {
+    "Nombre": "Pastel de Coco y Piña",
+    "sabor": "coco y piña",
+    "tamano": "Mediano",
+    "capas": 3,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["blanco", "amarillo"],
+      "precio_extra": 9.00
+    },
+    "relleno": "crema de piña",
+    "extras": ["hojas de menta", "coco rallado"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/564x/e8/fd/80/e8fd805f793b1ba600b2640b016e204e.jpg"
+  },
+  {
+    "Nombre": "Pastel de Fresa con Chocolate",
+    "sabor": "fresa y chocolate",
+    "tamano": "Mediano",
+    "capas": 3,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["rojo", "blanco"],
+      "precio_extra": 8.50
+    },
+    "relleno": "crema de chocolate",
+    "extras": ["chocolate blanco rallado", "fresas frescas"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/564x/d3/5a/e0/d35ae037cf008415ecd4b0e6abe00fd5.jpg"
+  },
+  {
+    "Nombre": "Pastel de Vainilla y Caramelo",
+    "sabor": "vainilla y caramelo",
+    "tamano": "Grande",
+    "capas": 4,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["blanco", "dorado"],
+      "precio_extra": 10.00
+    },
+    "relleno": "crema de caramelo",
+    "extras": ["perlas de azúcar", "hojas de oro comestible"],
+    "categoria": "XV años",
+    "imagen": "https://i.pinimg.com/736x/d4/be/76/d4be76ebc85d48c2f482b828ae1bc533.jpg"
+  },
+  {
+    "Nombre": "Pastel de Tres Leches Tradicional",
+    "sabor": "tres leches",
+    "tamano": "Grande",
+    "capas": 3,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["blanco"],
+      "precio_extra": 6.00
+    },
+    "relleno": "crema de leche",
+    "extras": ["fresas", "moras"],
+    "categoria": "Bautizos",
+    "imagen": "https://i.pinimg.com/564x/62/4e/ee/624eee394d97fb202f66dcc951f1fe1e.jpg"
+  },
+  {
+    "Nombre": "Pastel de Chocolate con Naranja",
+    "sabor": "chocolate y naranja",
+    "tamano": "Mediano",
+    "capas": 3,
+    "decoracion": {
+      "tipo": "fondant",
+      "colores": ["marrón", "naranja"],
+      "precio_extra": 10.00
+    },
+    "relleno": "crema de naranja",
+    "extras": ["cáscara de naranja confitada"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/564x/a7/9f/79/a79f797f85ce738caa4a9d1d72a681ba.jpg"
+  },
+  {
+    "Nombre": "Pastel de Zanahoria Clásico",
+    "sabor": "zanahoria",
+    "tamano": "Mediano",
+    "capas": 2,
+    "decoracion": {
+      "tipo": "crema de mantequilla",
+      "colores": ["naranja", "blanco"],
+      "precio_extra": 7.00
+    },
+    "relleno": "crema de queso",
+    "extras": ["nueces", "zanahorias de azúcar"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/564x/ca/2e/23/ca2e2377abe30a8e14e528a5f8835df1.jpg"
+  },
+  {
+    "Nombre": "Pastel de Almendra con Fresas",
+    "sabor": "almendra y fresas",
+    "tamano": "Grande",
+    "capas": 4,
+    "decoracion": {
+      "tipo": "crema de mantequilla",
+      "colores": ["rosa", "blanco"],
+      "precio_extra": 12.00
+    },
+    "relleno": "mermelada de fresas",
+    "extras": ["fresas frescas", "almendras"],
+    "categoria": "XV años",
+    "imagen": "https://i.pinimg.com/564x/b2/89/26/b28926a14d4a7d679d61582191b708ac.jpg"
+  },
+  {
+    "Nombre": "Pastel de Chocolate y Menta",
+    "sabor": "chocolate y menta",
+    "tamano": "Mediano",
+    "capas": 3,
+    "decoracion": {
+      "tipo": "fondant",
+      "colores": ["marrón", "verde"],
+      "precio_extra": 11.00
+    },
+    "relleno": "crema de menta",
+    "extras": ["menta fresca", "chocolate rallado"],
+    "categoria": "Cumpleaños",
+    "imagen": "https://i.pinimg.com/736x/37/f3/6f/37f36f3945451642ac074822241b6b5e.jpg"
+  },
+  {
+    "Nombre": "Pastel de Café y Chocolate",
+    "sabor": "café y chocolate",
+    "tamano": "Grande",
+    "capas": 4,
+    "decoracion": {
+      "tipo": "crema batida",
+      "colores": ["marrón", "blanco"],
+      "precio_extra": 12.00
+    },
+    "relleno": "crema de chocolate",
+    "extras": ["granos de café cubiertos de chocolate"],
+    "categoria": "Bodas",
+    "imagen": "https://i.pinimg.com/564x/cb/4d/d8/cb4dd8e31d6339f395b1b8b0b7025dd3.jpg"
+  }
+]
